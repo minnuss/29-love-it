@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10px
+  font-family: 'Montserrat', sans-serif; // 'Montserrat', 'Roboto';
+}
+
+.love {
+  min-height: 100vh;
+  text-align: center;
+
+  &__content {
+    padding: 20px;
+    font-size: 1.6rem;
+
+    h3 {
+      text-align: center;
+
+      i {
+        color: red;
+      }
+    }
+    small {
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .loveMe {
+      height: 440px;
+      width: 300px;
+      background: url(https://images.pexels.com/photos/38867/pexels-photo-38867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+        center / cover no-repeat;
+      margin: auto;
+      cursor: pointer;
+      max-width: 100%;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    // heart that is going to be activated with js
+    .loveMe .fa-heart {
+      position: absolute;
+      animation: grow 0.6s linear;
+      transform: translate(-50%, -50%) scale(0);
+      color: red;
+    }
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
